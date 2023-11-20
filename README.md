@@ -12,3 +12,11 @@
 ## Markdown
   - [Markdown이란?](Markdown/README.md)
   - [Markdown 기본 문법 정리](Markdown/markupl.md)
+
+## Java
+  - [Java란?](Java/README.md)
+  - [변수와 자료형](Java/variableType.md)
+  - [데이터 입력 받기](Java/scanner.md)
+  - 문자열 응용
+  - 배열
+  - 데이터 표현
