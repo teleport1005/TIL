@@ -17,6 +17,9 @@
   - [Java란?](Java/README.md)
   - [변수와 자료형](Java/variableType.md)
   - [데이터 입력 받기](Java/scanner.md)
-  - 문자열 응용
-  - 배열
-  - 데이터 표현
+  - [문자열 응용](Java/stringApply.md)
+  - [배열](Java/arrayIntro.md)
+  - 데이터 표현 
+
+## Java Practice Challenges
+- [연습 문제를 열심히 풀어 보아요]
