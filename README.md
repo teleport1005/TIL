@@ -22,4 +22,5 @@
   - 데이터 표현 
 
 ## Java Practice Challenges
-- [연습 문제를 열심히 풀어 보아요]
+- [연습 문제를 열심히 풀어 보아요](Java/codingEx.md)
+
