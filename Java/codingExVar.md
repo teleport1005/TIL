@@ -12,6 +12,7 @@ Scanner scanthr = new Scanner(System.in);
 아무 내용이나 입력해 주시면 세 번 반복하겠습니다.챗 GPT 짱이다!
 챗 GPT 짱이다! 챗 GPT 짱이다! 챗 GPT 짱이다!
 ```
+---
 2. 두 개의 숫자를 입력 받고, 순서를 바꿔서 출력하시오.
 ```Java
 Scanner scannerset = new Scanner(System.in);
@@ -25,6 +26,7 @@ Scanner scannerset = new Scanner(System.in);
 두 번째 숫자를 입력해 주세요.25
 25 89
 ```
+---
 3.   아래 모양을 출력하는 코드를 만들어 보시오.
 ```
         *   *  
@@ -42,6 +44,7 @@ Scanner scannerset = new Scanner(System.in);
         System.out.println("  *****  ");
         System.out.println("    *    ");
 ```
+---
 4. 시간과 오전, 오후를 입력받고 ex 오전 xx시의 형식으로 출력하는 코드를 작성하시오.
 ```java
         Scanner scanner = new Scanner(System.in);
@@ -56,6 +59,7 @@ Scanner scannerset = new Scanner(System.in);
 시간을 숫자로 입력해 주세요: 11
 오전 11시
 ```
+---
 5. 사용자에게 3개의 0.0 ~ 4.5 사이의 실수를 입력 받고, 3명의 이름을 입력받은 뒤,  
   이름 - <이름>, 학점 - <실수>의 형태로 3 줄을 출력하는 프로그램을 작성하시오.  
   ```Java
@@ -85,6 +89,7 @@ Scanner scannerset = new Scanner(System.in);
 이름 - 김과탑, 학점 - 3.45
 이름 - 김학고, 학점 - 1.02
   ```
+  ---
 6. 사용자로부터 두 개의 숫자를 입력받아 더한 값을 출력하는 프로그램을 작성하시오.
 
 ```Java
@@ -100,7 +105,7 @@ Scanner scannerset = new Scanner(System.in);
 두 번째 숫자를 입력하세요.9542
 18392
 ```
-
+---
 > 배워가는 점
 > - `%`는 문자열 포맷팅(String.format)을 위해 사용됨.(***`""`빼먹지 말자..)  
 > - `String.format()` 메서드는 주어진 형식에 따라 `값`을 `문자열`로 변환한다.

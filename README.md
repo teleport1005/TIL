@@ -19,8 +19,10 @@
   - [데이터 입력 받기](Java/scanner.md)
   - [문자열 응용](Java/stringApply.md)
   - [배열](Java/arrayIntro.md)
-  - 데이터 표현 
+  - [데이터 표현](Java/javaData.md)
+  - [연산자](Java/operator.md)
 
 ## Java Practice Challenges
-- [연습 문제를 열심히 풀어 보아요](Java/codingEx.md)
+- [변수와 자료형을 활용한 연습 문제 풀기](Java/codingExVar.md)
+- [연산자를 활용한 연습 문제 풀기](Java/codingExOper.md)
 
