@@ -37,8 +37,8 @@ System.out.println("백스페이스: \b앞의 문자를 하나 지웁니다.");
 ### 문자열 서식 설정 String Formatting
  - String Formatting은 변수를 `String`에 저장하여 응용할 수 있다.
  ```Java
-int dust = 10; /// `dust`라는 String에 `int` 정수 값을 저장
-String status = "좋음"; /// `status`라는 String에 `String` 문자열 값을 저장
+int dust = 10; /// `dust`에 `int` 정수 값을 저장
+String status = "좋음"; /// `status`에 `String` 문자열 값을 저
 
 System.out.println(String.format("미세먼지 농도: %d (%s)", dust, status));
 ```
@@ -46,7 +46,7 @@ System.out.println(String.format("미세먼지 농도: %d (%s)", dust, status));
 미세먼지 농도: 10 (좋음)
 ```
 > 대치하고 싶은 부분을 `%`로 시작하는 포맷 코드를 추가하여 작성  
-> `,`로 구분하여 대입 데이터 입력
+> `,`로 구분하여 대입 데이터를 차례로 입력
 
 | 코드 | 자료형 |
 | --- | --- |
@@ -56,5 +56,8 @@ System.out.println(String.format("미세먼지 농도: %d (%s)", dust, status));
 | %f | 부동소수(float, double) |
 
 **`format`은 여러 변수를 문자열에 삽입할 때 응용하면 좋다.**
+>`print`는 줄바꿈을 하지 않고 출력한다.
+>`println`은 출력 후 줄바꿈을 실행한다.
+
 
 

@@ -17,12 +17,16 @@
   - [Java란?](Java/README.md)
   - [변수와 자료형](Java/variableType.md)
   - [데이터 입력 받기](Java/scanner.md)
-  - [문자열 응용](Java/stringApply.md)
+  - [문자열 응용과 출력 설정](Java/stringApply.md)
   - [배열](Java/arrayIntro.md)
   - [데이터 표현](Java/javaData.md)
   - [연산자](Java/operator.md)
+  - [제어문이란?](Java/controlStatements.md)
+  - [조건문](Java/ifSwich.md)
+  - [반복문](Java/whileFor.md)
 
 ## Java Practice Challenges
 - [변수와 자료형을 활용한 연습 문제 풀기](Java/codingExVar.md)
 - [연산자를 활용한 연습 문제 풀기](Java/codingExOper.md)
-
+- [조건문을 활용한 연습 문제 풀기](Java/codingExifelse.md)
+- [반복문을 활용한 연습 문제 풀기](Java/codingExforwhile.md)
