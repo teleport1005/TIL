@@ -24,9 +24,11 @@
   - [제어문이란?](Java/controlStatements.md)
   - [조건문](Java/ifSwich.md)
   - [반복문](Java/whileFor.md)
+  - [메서드](Java/methods.md)
 
 ## Java Practice Challenges
 - [변수와 자료형을 활용한 연습 문제 풀기](Java/codingExVar.md)
 - [연산자를 활용한 연습 문제 풀기](Java/codingExOper.md)
 - [조건문을 활용한 연습 문제 풀기](Java/codingExifelse.md)
 - [반복문을 활용한 연습 문제 풀기](Java/codingExforwhile.md)
+- [메서드를 활용한 연습 문제 풀기](Java/codingExMethod.md)
