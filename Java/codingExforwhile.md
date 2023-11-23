@@ -136,3 +136,37 @@ true
 12월 1일은 일요일
 ```
  
+ ```
+ ------------------------------------------------------
+ ```
+
+ #### 혼자 하는 연습..
+- 숫자를 입력받아 해당 숫자의 구구단을 출력하는 코드를 작성하세요.
+```Java
+public class myPracticeControlQ1 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("숫자를 입력하시면 구구단을 알려드립니다.");
+        int timesTable = scanner.nextInt();
+
+        for (int i = 1; i <= 9; i++) {
+            System.out.println(timesTable + " x " + i + " = " + (timesTable * i));
+        }
+```
+- 1부터 50까지의 숫자 중에서 홀수의 합을 구하는 프로그램을 작성하세요.
+```Java
+public class myPracticeControlQ2 {
+    public static void main(String[] args) {
+        // 홀수를 어떻게 찾을 것인가
+        // 홀수는 2로 나누어지 않음
+        // 찾은 홀수를 변수에 저장하자!
+        int result = 0;
+        for (int i = 1; i <= 50; i++) {
+            if (i % 2 != 0) {
+                result += i; // 변수에 저장했음.. 그 다음에는..?
+            }
+        }
+        System.out.println(result);
+    }
+}
+```
