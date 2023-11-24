@@ -13,7 +13,7 @@
   - [Markdown이란?](Markdown/README.md)
   - [Markdown 기본 문법 정리](Markdown/markupl.md)
 
-## Java
+## Java 기초
   - [Java란?](Java/README.md)
   - [변수와 자료형](Java/variableType.md)
   - [데이터 입력 받기](Java/scanner.md)
@@ -25,6 +25,10 @@
   - [조건문](Java/ifSwich.md)
   - [반복문](Java/whileFor.md)
   - [메서드](Java/methods.md)
+
+## Java 기본
+ - [객체와 클래스](Java/class.md)
+ - [Java의 데이터 저장](Java/classData.md)
 
 ## Java Practice Challenges
 - [변수와 자료형을 활용한 연습 문제 풀기](Java/codingExVar.md)
