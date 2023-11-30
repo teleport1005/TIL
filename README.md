@@ -32,6 +32,8 @@
  - [Java의 데이터 저장](Java/classData.md)
  - [객체 지향 프로그래밍](Java/objectProgram.md)
  - [Collections Framework](Java/Framework.md)
+ - [Stream API](Java/StreamAPI.md)
+ - [File IO](Java/fileIo.md)
 
 ## Java Practice Challenges
 - [변수와 자료형을 활용한 연습 문제 풀기](Java/codingExVar.md)
