@@ -3,11 +3,12 @@
 ### 변수(Variable)
 - 데이터를 담는 상자와 같은 역할
 - 일정 값을 저장, 정보를 담아두는 것
+- 변할 수 있는 수
 
 ```Java
 public class HelloJava {
     public static void main(String[] args) {
-        int a = 100;
+        int a = 100; // a -> 변수!
         System.out.println(a);
         String b = "Hello, Variable!"
         System.out.println(b);
@@ -25,8 +26,8 @@ Hello, Variable!
  - 변수는 `<자료형> <이름> = <값>`의 형태로 만들 수 있음
  - 선언된 변수의 값은 재할당 등의 변경이 가능하나 **자료형의 형태는 변경이 불가능함**
  ```Java
- int date;
-date = 100;
+ int date; // date라는 int형 변수를 선언
+date = 100; // date 변수에 100이라는 값을 할당 -> 변수 초기화
 ```
 > 위처럼 1) 변수를 먼저 선언하고 2) 값을 할당할 수 있음
 
@@ -34,6 +35,8 @@ date = 100;
 int month = 11, day = 20;
 ```
 > 한 줄에 여러 개의 변수를 동시에 선언할 수 있음
+- 현 시점에서 사용하는 변수는 지역 변수이다
+- 지역 변수는 초기화를 해야 컴파일이 가능하다
 
 <details>
 <summary>
