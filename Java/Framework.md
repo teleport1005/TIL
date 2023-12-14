@@ -57,6 +57,17 @@ System.out.println(names.remove("Eric")); // 값을 기준으로
 ```
 >제거 성공 여부는 `boolean` 값으로 반환된다
 
+```Java
+List<String> strings = new ArrayList<>();
+>가장 많이 사용되는 List 타입  
+>배열을 포장해 놓은 것
+> 탐색이 빠르고 수정이 느림
+```
+```java
+List<String> strings2 = new LinkedList<>();
+>배열을 순서대로 탐색함  
+>탐색이 느리고 수정이 빠름
+```
 ### Map
 - `Key`와 `Value`의 쌍으로 이루어진 인터페이스
 - 데이터와 그 데이터를 찾기 위한 `key`를 함께 저장함
