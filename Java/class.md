@@ -3,24 +3,14 @@
 >각 객체들이 필요한 역할을 담당하여 작동할 수 있도록 하는 프로그래밍
 ### 객체란?
 - 정보를 담아 실체하고 작동하는 것
-> 실제의 데이터
+> 실제의 데이터, 인스턴스
 ### 클래스란?
 - 객체에 정보와 기능을 담는 것
 >정보, 기능, 설계도, 틀
 ---
-```
-각각 개별적인 하나의 자동차 = 객체
-모든 자동차의 개념 - 클래스
-```
-```Java
-public static void main(String[] args) {
-    Car myCar = new Car();
-    String myStr = "new string object";
-}
-```
-> `Car`는 클래스, `myCar`는 `Car`의 인스턴스인 객체이다.
-### 속성(attribute)
- - 하나의 객체가 가질 수 있는 성질 또는 데이터
+
+### Class의 생성과 사용
+#### `Class`의 생성
  ```Java
 public class Car {
     public String name;
@@ -28,21 +18,33 @@ public class Car {
     public int fuel;
 }
 ```
-> 객체의 데이터를 클래스 내부에서 정의할 수 있다.
-```Java
-public static void main(String[] args) {
-    Car myCar1 = new Car();
-    // 속성에 `.`을 이용해 접근하고,
-    // 변수에 데이터를 할당하듯
-    // 속성에 데이터를 할당할 수 있다.
-    myCar1.name = "K5";
-    myCar1.brand = "Kia";
-    myCar1.fuel = 72;
-    // 값을 가져올때도 `.`을 통해 가져온다.
-    System.out.println(
-        String.format("My car name is: %s", myCar1.name));
-```
+- `Car`라는 Class를 정의했다
+- `Car Class`에는 이름`name`, 브랜드`brand`, 기름`fuel`의 변수를 가진다
+- `Class`에 정의한 변수들은 멤버 변수, 필드`Field`라고 부른다
+- 특정 `class`에 소속된 멤버이기 때문에 멤버 변수라 일컫는다
+- `Field`는 전통적인 용어로 데이터 항목을 말한다
+- `int`가 정수 타입, `String`이 문자 타입인 것처럼 `Car`라는 타입을 생성한 것이다  
 
+---
+
+#### `Class`의 사용
+```Java
+    Car myCar // myCar라는 Car Class 변수 데이터를 생성
+    myCar = new Car(); // myCar에 Class의 참조값을 대입
+    myCar.name = "Casper";
+    myCar.brand = "Hyundai";
+    myCar.fuel = 80;
+```
+- 멤버 변수에 값을 대입하려면 `.`(dot)을 사용하여 접근한다
+- `myCar`에는 `Class`의 데이터 참조값이 있으므로 해당 위치에서 접근하는 것이다
+>`Car myCar`라는 변수 선언 부분에서 데이터를 저장하는 메모리 참조값이 생성되고 `myCar.name`은 저장된 메모리의 참조값으로 이동하여 접근, `name`에 데이터를 대입한다
+
+> `Car`는 클래스, `myCar`는 `Car`의 인스턴스인 객체이다.
+
+```
+각각 개별적인 하나의 데이터 = 객체
+모든 자동차의 개념 - 클래스
+```
 -----
 - public class '   '
 - Java 파일 하나에 하나의 클래스 정보 입력
