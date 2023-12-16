@@ -38,6 +38,7 @@
 
 ## Java 기본
  - [객체와 클래스](Java/class.md)
+ - [기본형과 참조형](Java/priType-refType.md)
  - [Java의 데이터 저장](Java/classData.md)
  - [객체 지향 프로그래밍](Java/objectProgram.md)
  - [Collections Framework](Java/Framework.md)
