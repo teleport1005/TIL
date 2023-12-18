@@ -41,7 +41,14 @@ public class MusicPlayer {
         System.out.println("음악 플레이어를 종료합니다");
     } // 기능
 ```
->외부의 코드가 내부의 작동 방식을 고려하지 않고 내부 실제 구현을 외부에 숨긴다.(접근 제어자)
+  ### 캡슐화의 접근 제어
+  - 데이터와 데이터를 처리하는 메서드를 묶어서 접근을 제한할 수 있다 
+  1. 데이터: 객체의 데이터에 직접 접근할 수 없도록 제어한다.  
+           메서드를 통하여 접근하도록 한다.  
+           >접근을 제어하지 않으면 캡슐화가 깨진다
+  2. 기능: 내부에서만 사용하는 기능들은 접근할 수 없도록 제어한다.  
+>데이터는 모두 숨기고, 꼭 필요한 기능만 노출하는 것이 좋은 캡슐화
+
 
 
 ### 생성자
@@ -52,9 +59,9 @@ public class MemberConsturct {
     String name;
     int age;
     int grade;
+
     // 생성자 부분
     MemberConsturct(String name, int age, int grade){
-        System.out.println("생성자 호출 name = " + name + ", age = " + age + ", grade = " + grade);
         this.name = name;
         this.age = age;
         this.grade = grade;
@@ -62,6 +69,15 @@ public class MemberConsturct {
 }
 ```
 >생성자는 `Class` 이름과 같게 생성하며 반환 타입이 없다
+>생성자를 직접 정의하게 되면 반드시 호출값이 필요하다
+```Java
+public class ConsturctMain1 {
+    public static void main(String[] args) {
+        MemberConsturct member1 = new MemberConsturct(); 
+        // 컴파일 오류 발생        
+    }
+}
+```
 2. 생성자 호출
 ```Java
 public class ConsturctMain1 {
@@ -96,7 +112,58 @@ public class ConsturctMain1 {
 >허용 범위 순서  
 `private` -> `default` -> `protected` -> `public`
 
-- 접근 제어자는 필드와 메서드, 생성자에 사용된다.
+  ### 접근 제어자의 사용
+  - 접근 제어자는 필드와 메서드, 생성자에 사용된다.
+  - 클래스 레벨의 접근 제어자는 `public`과 `default`만 사용이 가능하다
+  - `public` 클래스는 파일명과 같은 이름으로 생성되어야 한다
+    - 하나의 자바 파일에 `public`클래스는 하나만 등장할 수 있다
+    - `default` 파일은 무한정 생성 가능
+
+  ### Getter & Setter
+  - `private` 으로 설정된 속성등에 접근하기 위해 public 메서드를 만들어 속성의 값을 반환하게 만들 수 있다.
+  ```Java
+  public class Car {
+    private String name;
+    private String brand;
+
+    //Getter 메서드
+    public String getName() {
+        return name;
+    }
+
+    public String getBrand() {
+        return brand;
+    }
+}
+  ```
+  ```Java 
+  Car someCar = new Car(); 
+  System.out.println(someCar.getBrand());
+  System.out.println(someCar.getName());
+  ```
+  - 단순 접근이 아닌  Setter 메서드로 자유롭게 값을 변경하게 할 수도 있다
+  ```Java
+   public void setFuel(int fuel) { //Setter 메서드
+        this.fuel = fuel;
+    }
+  ```
+
+  ### Wrapper Class
+  - int, char, boolean과 같은 자료형은 클래스가 아닌 원시타입이다. 이들을 객체지향적 관점에서 활용할 수 있도록 해주는 클래스를 Wrapper Class라 부른다.
+  - 다양한 기능들이 내장되어 있다.
+
+| 메서드 | 기능 |
+| --- | --- |
+| Integer.parseInt(String s) | 문자열이 나타내는 정수를 반환한다. |
+| Double.parseDouble(String s) | 문자열이 나타내는 실수를 반환한다. |
+| Character.isDigit(char ch) | 문자가 숫자를 나타내는지 확인한다. |
+| Character.isLetter(char ch) | 문자가 글자를 나타내는지 확인한다. |
+| string.length() | 문자열의 글자수를 반환한다. |
+| string.substring(int beginIndex) | 문자열을 beginIndex 부터 자른 문자열을 반환한다. |
+| string.charAt(int index) | 문자열의 index 위치의 char를 반환한다. |
+| string.indexOf(String str) | 주어진 문자열이 시작하는 index를 반환한다. |
+| string.split(String regex) | 주어진 정규표현식을 기준으로 문자열을 나눠 배열로 반환한다. |
+
 
 
 ### 상속

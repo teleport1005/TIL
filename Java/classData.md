@@ -1,5 +1,23 @@
 ## Java의 데이터 저장
-- class의 객체, 변수의 저장
+- Java의 데이터 저장 구조
+
+  ### 메서드 영역(Method Area)
+  - 프로그램을 실행하는데 필요한 공통 데이터 저장
+  1. 클래스 정보: 클래스의 실행 코드, 필드, 메서드와 생성자 코드 등 실행코드  
+  2. `staic` 영역: 스태틱 변수를 보관  
+  3. 런타임 상수 풀
+
+  ### 스택 영역(Stack Area)
+  - Java 실행시 생성되며 각 스택 프레임은 지역 변수, 중간 연산 결과, 메서드 호출 정보 등을 포함
+  1. 스택 프레임: 메서드를 호출할 때마다 생성되고 제거된다.
+
+  ### 힙 영역(Heap Area)
+  - 객체와 배열이 생성되는 영역
+
+>인스턴스는 각각의 데이터가 저장되기 때문에 힙 영역에 메모리가 따로 할당되어 저장, 관리된다.  
+>메서드는 하나의 코드로 데이터를 처리하기 때문에 메서드 영역에서 저장되어 호출된다. 
+
+
 
 ### Stack Memory
 - 변수가 저장될 공간을 `Stack Memory`에 할당하여 호출
@@ -9,16 +27,3 @@
 - 클래스와 같은 객체들은 `Heap Space`에 할당됨
 - 메서드가 종료되어도 객체의 데이터를 저장함
 
-### 유용한 메서드들
-
-| 메서드 | 기능 |
-| --- | --- |
-| Integer.parseInt(String s) | 문자열이 나타내는 정수를 반환한다. |
-| Double.parseDouble(String s) | 문자열이 나타내는 실수를 반환한다. |
-| Character.isDigit(char ch) | 문자가 숫자를 나타내는지 확인한다. |
-| Character.isLetter(char ch) | 문자가 글자를 나타내는지 확인한다. |
-| string.length() | 문자열의 글자수를 반환한다. |
-| string.substring(int beginIndex) | 문자열을 beginIndex 부터 자른 문자열을 반환한다. |
-| string.charAt(int index) | 문자열의 index 위치의 char를 반환한다. |
-| string.indexOf(String str) | 주어진 문자열이 시작하는 index를 반환한다. |
-| string.split(String regex) | 주어진 정규표현식을 기준으로 문자열을 나눠 배열로 반환한다. |
