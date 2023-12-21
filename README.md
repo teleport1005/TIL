@@ -56,6 +56,10 @@
  - [Database란?](Database/README.md)
  - [관계형 Database](Database/Relation.md)
  - [SQL DDL](Database/SQL.md)
+ - [Normalization](Database/Normalization.md)
+ - [JDBC](Database/JDBC.md)
+
+
 
 
 
