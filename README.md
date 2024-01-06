@@ -66,6 +66,8 @@
  - [IoC Container](Spring/IoCContainer.md)
  - [MVC & Thymeleaf](Spring/MVCThymeleaf.md)
  - [Spring MVC CRUD](Spring/mvcCrud.md)
+ - [MyBatis Framework](Spring/MyBatis.md)
+ - [JPA](Spring.jpa.md)
 
 
 
