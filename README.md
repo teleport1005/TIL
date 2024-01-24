@@ -69,6 +69,7 @@
  - [MyBatis Framework](Spring/MyBatis.md)
  - [JPA](Spring/jpa.md)
  - [Spring Beans](Spring/springBeans.md)
+ - [Spring Boot & Rest](Spring/restful.md)
 
  ## HTTP
  - [HTTP란?](HTTP/README.md)
