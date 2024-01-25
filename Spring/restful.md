@@ -38,5 +38,63 @@
     2. 데이터 조작시 데이터의 상태나 표현으로 조작할 수 있도록 설계(`JSON`) -> 관리보다 표현에 중점  
     3. 각 요청과 응답에 충분한 정보를 포함(`Content-Type Header 사용`)
     4. Hypermedia As The Engine Of Application State(HAETOAS) -> 최초의 URL에서 모든 정보를 확인할 수 있게 설계  
-    >✏ 실질적으로 구현하기에는 난이도가 높음, 모든 원칙을 100% 지키기는 어려우며 `RESTful`한 API를 목표로 둔다
+    >✏ 실질적으로 구현하기에는 난이도가 높음
 
+## RESTful
+- 실질적으로 `REST` 원칙을 모두 지키며 서비스를 개발하는 것은 매우 어려움
+- `REST API` 제작하는 것이 아닌 RESTful한 API를 목표로 제작  
+- 우선적으로 하기의 원칙을 지키며 API 작업을 진행
+  ### 1. URL 구성
+  - `URL`이 자원을 논리적으로 표현할 수 있도록 구성하여야 함
+  - 할 일 목록 -> `/todo` URL 연결처럼 직관적인 표현
+
+  ### 2. HTTP Method
+  - 자원에 적용할 작업을 `HTTP Method`로 구분
+  - 추가 -> `POST`, 회수(수정) -> `GET`, 삭제 -> `DELETE`
+
+>✏ 위 원칙들을 지키며 API 작업을 할 경우, Richardson Maturity Model의 Level 2를 달성함  
+>✏ 좋은 API 디자인이라고 볼 수 있음
+
+
+
+
+## RESTful한 Article 서비스 만들기
+
+ ### Article & ArticleDto 
+ - `Entity` 정의
+ 
+ ### URL 구성
+ - `URL` 이름 자체에는 `자원을 식별`한다는 의미를 담고 있다
+ - 하나의 `URL`이 자원의 한 종류를 식별할 수 있도록 구성
+ - 기본 `URL`은 복수형으로 구성하며, 단일 데이터 요청시에는 id를 포함하여 식별한다
+  >✏ `/articles` : 전체 게시글들에 대해서 작업하기 위한 URL  
+  >✏ `/articles/{id}` : 어떤 특정 게시글에 대해서 작업하기 위한 URL
+
+ ### Method 기능 정의
+ - `URL`로 표현된 자원에 어떤 작업을 할지 `HTTP Method`로 특정짓도록 구성하는 원칙
+  >✏ CREATE: 새로운 자원을 생성하기 위한 기능으로, `POST` 사용   
+  >✏ READ: 이미 존재하는 자원을 조회하기 위한 기능으로, `GET` 사용   
+  >✏ UPDATE: 이미 존재하는 자원을 수정하기 위한 기능으로, `PUT` 사용    
+  >✏ DELETE: 삭제하기 위한 기능으로, `DELETE` 사용  
+
+ ### URL과 Method 조합
+ - 위 내용을 바탕으로 `URL`과 `Method`를 조합하여 `RequestMapping` 구성
+  >✏ 게시글 생성: `POST /articles`  
+  >✏ 게시글 전체 조회: `GET /articles`  
+  >✏ 게시글 단일 조회: `GET /articles/{id}`  
+  >✏ 게시글 수정: `PUT /articles/{id}`  
+  >✏ 게시글 삭제: `DELETE /articles/{id}`  
+
+ ### Comment 
+ - `comment`는 하나의 `article`에 종속되어 있기 때문에 `URL`에도 참조되어야 한다
+  >✏ 게시글에 댓글 추가: `POST /articles/{articleId}/comments`  
+  >✏ 게시글 댓글 전체 조회: `GET /articles/{articleId}/comments`  
+  >✏ 게시글 댓글 수정: `PUT /articles/{articleId}/comments/{commentId}`  
+  >✏ 게시글 댓글 삭제: `DELETE /articles/{articleId}/comments/{commentId}`  
+
+ ### RequestParam 활용
+ - 페이징, 검색 기능 구현
+ - `URL`의 구성 중 Query Component를 활용
+ - `?` 뒤에 오는 것이 `Query Componen`, 서버에 동적으로 자원을 요구하거나 표현 형식을 변환한다
+
+ - [Pagination 만들기](Page/Pagination.md)
