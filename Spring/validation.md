@@ -102,8 +102,8 @@ implementation 'org.springframework.boot:spring-boot-starter-validation'
  ```Java
  @PostMapping("/validate-dto")
   public String validateDto(
-  @Valid // 이 데이터는 입력을 검증해야 한다
   @RequestBody
+  @Valid // 이 데이터는 입력을 검증해야 한다
   UserDto dto
   ) {
      return "done";
@@ -139,3 +139,6 @@ implementation 'org.springframework.boot:spring-boot-starter-validation'
   }  
    ```
 
+ >✏ 정리  
+  @Valid: DTO 클래스에 적용된 유효성 검증 규칙을 실행  
+  @Validated: 클래스에 붙여 메서드에 유효성 검사 규칙을 추가할 수 있게 함
