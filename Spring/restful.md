@@ -92,9 +92,26 @@
   >✏ 게시글 댓글 수정: `PUT /articles/{articleId}/comments/{commentId}`  
   >✏ 게시글 댓글 삭제: `DELETE /articles/{articleId}/comments/{commentId}`  
 
- ### RequestParam 활용
- - 페이징, 검색 기능 구현
- - `URL`의 구성 중 Query Component를 활용
- - `?` 뒤에 오는 것이 `Query Componen`, 서버에 동적으로 자원을 요구하거나 표현 형식을 변환한다
+ ### Query Parameter 활용
+ - 페이징, 검색 기능 구현시 동일한 자원에 특정 조건을 덧붙이는 동작을 요구함
+ - `URL`의 구성 중 Query Component를 활용할 수 있음
+ - `?` 뒤에 오는 것이 `Query Component`, 서버에 동적으로 자원을 요구하거나 표현 형식을 변환한다
+  > [Pagination 만들기](Page/Pagination.md)
+ - `Query Component`는 `인자 이름 = 값` 조합으로 인자를 전달하며 `&`로 각 인자를 부분함
+ - `Spring`에서 `Query Component`를 메서드로 가져오기 위해서는 `RequestParam` 활용 가능
+ ```Java
+ @GetMapping("/query-test")
+    public void queryParams(
+            @RequestParam("name")
+            String name,
+            @RequestParam(value = "age", required = false)
+            Integer age,
+            @RequestParam(value = "height", defaultValue = "175")
+            Integer height,
+            @RequestParam("weight")
+            Integer weight
+    ) {
+    }
+ ```
+ >✏ `RequestParam`에는 `required`와 같은 `defaultValue` 인자 전달 가능
 
- - [Pagination 만들기](Page/Pagination.md)

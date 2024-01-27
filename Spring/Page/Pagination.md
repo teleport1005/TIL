@@ -30,3 +30,22 @@ Page<Article> articleEntityPage = repository.findAll(pageable);
 ```
 - Page에 모든 데이터 반환하여 사용
 
+### URL 전달
+- Pagination은 새로운 자원을 전달하는 것이 아닌 데이터 중 일부만 전달하는 것
+- 따라서 동일한 URL에 `GET` Query Parameter 추가하여 활용
+- 현재 조회하고 싶은 페이지와 한 페이지에서 필요한 데이터의 갯수가 필요
+```URL
+GET /articles?page=1&limit=20 // URL 주소
+```
+- `Controller`에서 구현
+```Java
+  @GetMapping
+  public Page<ArticleDto> readAllPaged(
+          @RequestParam(value = "page", defaultValue = "1")
+          Integer page,
+          @RequestParam(value = "limit", defaultValue = "20")
+          Integer limit
+  ) {
+      return service.readAllPagination(page, limit);
+  }
+```
