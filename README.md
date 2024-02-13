@@ -58,6 +58,8 @@
  - [SQL DDL](Database/SQL.md)
  - [Normalization](Database/Normalization.md)
  - [JDBC](Database/JDBC.md)
+ - [MySQL](MySQL.md)
+ - [Redis](Redis.md)
 
 
  ## Spring
@@ -73,6 +75,9 @@
  - [File Handling](Spring/handling.md)
  - [Validation](Spring/validation.md)
  - [Spring Security](Spring/security.md)
+ - [Authorization](Spring/auth.md)
+ - [Relationship](Spring.Relationship.md)
+ - [Query DSL](Spring.Querydsl.md)
 
 
  ## HTTP
