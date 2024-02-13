@@ -59,7 +59,8 @@
  - [Normalization](Database/Normalization.md)
  - [JDBC](Database/JDBC.md)
  - [MySQL](MySQL.md)
- - [Redis](Redis.md)
+ - [Redis](Redis.md)  
+   [Redis 활용하기](HttpRedis.md)
 
 
  ## Spring
