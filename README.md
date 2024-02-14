@@ -79,6 +79,7 @@
  - [Authorization](Spring/auth.md)
  - [Relationship](Spring.Relationship.md)
  - [Query DSL](Spring.Querydsl.md)
+ - [RabbitMQ](Spring.RabbitMQ.md)
 
 
  ## HTTP
